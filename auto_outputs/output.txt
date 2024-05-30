@@ -1,0 +1,365 @@
+Command: docker compose run --rm freqtrade backtesting --config user_data/config.json --strategy MeanReversionStrategy --timerange 20230101-20240501 -i 1m
+Output:
+Result for strategy MeanReversionStrategy
+======================================================== BACKTESTING REPORT =======================================================
+|               Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+|      SUI/USDT:USDT |      1087 |           0.20 |          1131.530 |          11.32 |        6:53:00 |   809     3   275  74.4 |
+|      LTC/USDT:USDT |       891 |           0.04 |            60.411 |           0.60 |       11:51:00 |   648     6   237  72.7 |
+| 1000PEPE/USDT:USDT |      1417 |          -0.23 |         -4018.484 |         -40.18 |        5:17:00 |   995     5   417  70.2 |
+|              TOTAL |      3395 |          -0.02 |         -2826.543 |         -28.27 |        7:32:00 |  2452    14   929  72.2 |
+===================================================== LEFT OPEN TRADES REPORT =====================================================
+|               Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| 1000PEPE/USDT:USDT |         1 |           4.09 |            39.367 |           0.39 |        1:28:00 |     1     0     0   100 |
+|      LTC/USDT:USDT |         1 |           1.30 |            12.520 |           0.13 |        2:54:00 |     1     0     0   100 |
+|      SUI/USDT:USDT |         1 |          -6.03 |           -57.986 |          -0.58 |        3:14:00 |     0     0     1     0 |
+|              TOTAL |         3 |          -0.21 |            -6.099 |          -0.06 |        2:32:00 |     2     0     1  66.7 |
+================================================== ENTER TAG STATS ===================================================
+|   TAG |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| OTHER |      3395 |          -0.02 |         -2826.543 |         -28.27 |        7:32:00 |  2452    14   929  72.2 |
+| TOTAL |      3395 |          -0.02 |         -2826.543 |         -28.27 |        7:32:00 |  2452    14   929  72.2 |
+======================================================= EXIT REASON STATS =======================================================
+|        Exit Reason |   Exits |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+---------+----------------+-------------------+----------------+----------------+-------------------------|
+|                roi |    2840 |           3.09 |         97565.365 |         975.65 |        6:44:00 |  2449    14   377  86.2 |
+| trailing_stop_loss |       1 |           4.29 |            38.848 |           0.39 |        0:41:00 |     1     0     0   100 |
+|         force_exit |       3 |          -0.21 |            -6.099 |          -0.06 |        2:32:00 |     2     0     1  66.7 |
+|          stop_loss |     551 |         -16.09 |       -100424.657 |       -1004.25 |       11:38:00 |     0     0   551     0 |
+|              TOTAL |    3395 |          -0.02 |         -2826.543 |         -28.27 |        7:32:00 |  2452    14   929  72.2 |
+===================== SUMMARY METRICS ======================
+| Metric                      | Value                      |
+|-----------------------------+----------------------------|
+| Backtesting from            | 2023-01-01 01:00:00        |
+| Backtesting to              | 2024-05-01 00:00:00        |
+| Max open trades             | 3                          |
+|                             |                            |
+| Total/Daily Avg Trades      | 3395 / 7.0                 |
+| Starting balance            | 10000 USDT                 |
+| Final balance               | 7173.457 USDT              |
+| Absolute profit             | -2826.543 USDT             |
+| Total profit %              | -28.27%                    |
+| CAGR %                      | -22.12%                    |
+| Sortino                     | -1.20                      |
+| Sharpe                      | -1.27                      |
+| Calmar                      | -1.94                      |
+| Profit factor               | 0.97                       |
+| Expectancy (Ratio)          | -0.83 (-0.01)              |
+| Trades per day              | 7.0                        |
+| Avg. daily profit %         | -0.06%                     |
+| Avg. stake amount           | 1121.083 USDT              |
+| Total trade volume          | 3806077.198 USDT           |
+|                             |                            |
+| Long / Short                | 1793 / 1602                |
+| Total profit Long %         | -50.26%                    |
+| Total profit Short %        | 21.99%                     |
+| Absolute profit Long        | -5025.882 USDT             |
+| Absolute profit Short       | 2199.339 USDT              |
+|                             |                            |
+| Best Pair                   | SUI/USDT:USDT 11.32%       |
+| Worst Pair                  | 1000PEPE/USDT:USDT -40.18% |
+| Best trade                  | 1000PEPE/USDT:USDT 28.81%  |
+| Worst trade                 | LTC/USDT:USDT -17.00%      |
+| Best day                    | 1795.803 USDT              |
+| Worst day                   | -1822.386 USDT             |
+| Days win/draw/lose          | 258 / 20 / 209             |
+| Avg. Duration Winners       | 5:08:00                    |
+| Avg. Duration Loser         | 13:50:00                   |
+| Max Consecutive Wins / Loss | 21 / 8                     |
+| Rejected Entry signals      | 0                          |
+| Entry/Exit Timeouts         | 0 / 0                      |
+|                             |                            |
+| Min balance                 | 5660.573 USDT              |
+| Max balance                 | 13279.873 USDT             |
+| Max % of account underwater | 57.37%                     |
+| Absolute Drawdown (Account) | 57.37%                     |
+| Absolute Drawdown           | 7619.3 USDT                |
+| Drawdown high               | 3279.873 USDT              |
+| Drawdown low                | -4339.427 USDT             |
+| Drawdown Start              | 2023-05-11 03:00:00        |
+| Drawdown End                | 2023-10-24 06:26:00        |
+| Market change               | 23.96%                     |
+============================================================
+
+Backtested 2023-01-01 01:00:00 -> 2024-05-01 00:00:00 | Max open trades : 3
+===================================================================== STRATEGY SUMMARY =====================================================================
+|              Strategy |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |            Drawdown |
+|-----------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------+---------------------|
+| MeanReversionStrategy |      3395 |          -0.02 |         -2826.543 |         -28.27 |        7:32:00 |  2452    14   929  72.2 | 7619.3 USDT  57.37% |
+============================================================================================================================================================
+
+For more details, please look at the detail tables above
+
+================================================================================
+Command: docker compose run --rm freqtrade backtesting --config user_data/config.json --strategy MeanReversionStrategy --timerange 20230101-20240501 -i 5m
+Output:
+Result for strategy MeanReversionStrategy
+======================================================== BACKTESTING REPORT =======================================================
+|               Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| 1000PEPE/USDT:USDT |       968 |           0.21 |          2083.331 |          20.83 |        5:03:00 |   700     5   263  72.3 |
+|      SUI/USDT:USDT |       742 |           0.09 |           550.947 |           5.51 |        6:46:00 |   533    11   198  71.8 |
+|      LTC/USDT:USDT |       711 |          -0.08 |         -1258.469 |         -12.58 |       11:41:00 |   501     7   203  70.5 |
+|              TOTAL |      2421 |           0.09 |          1375.809 |          13.76 |        7:31:00 |  1734    23   664  71.6 |
+=============================================== LEFT OPEN TRADES REPORT ===============================================
+|   Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |         0 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================================================== ENTER TAG STATS ===================================================
+|   TAG |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| OTHER |      2421 |           0.09 |          1375.809 |          13.76 |        7:31:00 |  1734    23   664  71.6 |
+| TOTAL |      2421 |           0.09 |          1375.809 |          13.76 |        7:31:00 |  1734    23   664  71.6 |
+======================================================= EXIT REASON STATS =======================================================
+|        Exit Reason |   Exits |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+---------+----------------+-------------------+----------------+----------------+-------------------------|
+|                roi |    2047 |           3.02 |         96271.164 |         962.71 |        6:36:00 |  1732    23   292  84.6 |
+| trailing_stop_loss |       2 |           4.45 |           168.146 |           1.68 |        0:22:00 |     2     0     0   100 |
+|          stop_loss |     372 |         -16.08 |        -95063.501 |        -950.64 |       12:39:00 |     0     0   372     0 |
+|              TOTAL |    2421 |           0.09 |          1375.809 |          13.76 |        7:31:00 |  1734    23   664  71.6 |
+===================== SUMMARY METRICS =====================
+| Metric                      | Value                     |
+|-----------------------------+---------------------------|
+| Backtesting from            | 2023-01-01 05:00:00       |
+| Backtesting to              | 2024-05-01 00:00:00       |
+| Max open trades             | 3                         |
+|                             |                           |
+| Total/Daily Avg Trades      | 2421 / 4.99               |
+| Starting balance            | 10000 USDT                |
+| Final balance               | 11375.809 USDT            |
+| Absolute profit             | 1375.809 USDT             |
+| Total profit %              | 13.76%                    |
+| CAGR %                      | 10.19%                    |
+| Sortino                     | 0.42                      |
+| Sharpe                      | 0.45                      |
+| Calmar                      | 1.59                      |
+| Profit factor               | 1.01                      |
+| Expectancy (Ratio)          | 0.57 (-0.01)              |
+| Trades per day              | 4.99                      |
+| Avg. daily profit %         | 0.03%                     |
+| Avg. stake amount           | 1537.371 USDT             |
+| Total trade volume          | 3721975.724 USDT          |
+|                             |                           |
+| Long / Short                | 1274 / 1147               |
+| Total profit Long %         | -17.16%                   |
+| Total profit Short %        | 30.92%                    |
+| Absolute profit Long        | -1716.158 USDT            |
+| Absolute profit Short       | 3091.967 USDT             |
+|                             |                           |
+| Best Pair                   | 1000PEPE/USDT:USDT 20.83% |
+| Worst Pair                  | LTC/USDT:USDT -12.58%     |
+| Best trade                  | 1000PEPE/USDT:USDT 28.81% |
+| Worst trade                 | LTC/USDT:USDT -17.26%     |
+| Best day                    | 885.895 USDT              |
+| Worst day                   | -1908.065 USDT            |
+| Days win/draw/lose          | 283 / 23 / 179            |
+| Avg. Duration Winners       | 5:03:00                   |
+| Avg. Duration Loser         | 14:01:00                  |
+| Max Consecutive Wins / Loss | 18 / 7                    |
+| Rejected Entry signals      | 0                         |
+| Entry/Exit Timeouts         | 0 / 1                     |
+|                             |                           |
+| Min balance                 | 8349.939 USDT             |
+| Max balance                 | 15907.861 USDT            |
+| Max % of account underwater | 35.73%                    |
+| Absolute Drawdown (Account) | 34.02%                    |
+| Absolute Drawdown           | 5411.224 USDT             |
+| Drawdown high               | 5907.861 USDT             |
+| Drawdown low                | 496.637 USDT              |
+| Drawdown Start              | 2024-03-29 10:00:00       |
+| Drawdown End                | 2024-04-13 20:05:00       |
+| Market change               | 23.03%                    |
+===========================================================
+
+Backtested 2023-01-01 05:00:00 -> 2024-05-01 00:00:00 | Max open trades : 3
+====================================================================== STRATEGY SUMMARY ======================================================================
+|              Strategy |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
+|-----------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------+-----------------------|
+| MeanReversionStrategy |      2421 |           0.09 |          1375.809 |          13.76 |        7:31:00 |  1734    23   664  71.6 | 5411.224 USDT  34.02% |
+==============================================================================================================================================================
+
+For more details, please look at the detail tables above
+
+================================================================================
+Command: docker compose run --rm freqtrade backtesting --config user_data/config.json --strategy MeanReversionStrategy --timerange 20230101-20240501 -i 15m
+Output:
+Result for strategy MeanReversionStrategy
+======================================================== BACKTESTING REPORT =======================================================
+|               Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| 1000PEPE/USDT:USDT |       501 |           0.58 |          5670.065 |          56.70 |        4:55:00 |   372     1   128  74.3 |
+|      SUI/USDT:USDT |       423 |           0.60 |          4144.172 |          41.44 |        6:23:00 |   323     3    97  76.4 |
+|      LTC/USDT:USDT |       490 |           0.16 |          1267.600 |          12.68 |       11:44:00 |   356     2   132  72.7 |
+|              TOTAL |      1414 |           0.44 |         11081.837 |         110.82 |        7:43:00 |  1051     6   357  74.3 |
+=============================================== LEFT OPEN TRADES REPORT ===============================================
+|   Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |         0 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================================================== ENTER TAG STATS ===================================================
+|   TAG |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| OTHER |      1414 |           0.44 |         11081.837 |         110.82 |        7:43:00 |  1051     6   357  74.3 |
+| TOTAL |      1414 |           0.44 |         11081.837 |         110.82 |        7:43:00 |  1051     6   357  74.3 |
+======================================================= EXIT REASON STATS =======================================================
+|        Exit Reason |   Exits |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+---------+----------------+-------------------+----------------+----------------+-------------------------|
+|                roi |    1213 |           3.15 |         80604.835 |         806.05 |        6:47:00 |  1049     6   158  86.5 |
+| trailing_stop_loss |       2 |           3.44 |           190.503 |           1.91 |        0:30:00 |     2     0     0   100 |
+|          stop_loss |     199 |         -16.09 |        -69713.500 |        -697.14 |       13:30:00 |     0     0   199     0 |
+|              TOTAL |    1414 |           0.44 |         11081.837 |         110.82 |        7:43:00 |  1051     6   357  74.3 |
+===================== SUMMARY METRICS =====================
+| Metric                      | Value                     |
+|-----------------------------+---------------------------|
+| Backtesting from            | 2023-01-01 15:00:00       |
+| Backtesting to              | 2024-05-01 00:00:00       |
+| Max open trades             | 3                         |
+|                             |                           |
+| Total/Daily Avg Trades      | 1414 / 2.92               |
+| Starting balance            | 10000 USDT                |
+| Final balance               | 21081.837 USDT            |
+| Absolute profit             | 11081.837 USDT            |
+| Total profit %              | 110.82%                   |
+| CAGR %                      | 75.29%                    |
+| Sortino                     | 2.32                      |
+| Sharpe                      | 2.64                      |
+| Calmar                      | 18.69                     |
+| Profit factor               | 1.16                      |
+| Expectancy (Ratio)          | 7.84 (0.04)               |
+| Trades per day              | 2.92                      |
+| Avg. daily profit %         | 0.23%                     |
+| Avg. stake amount           | 2078.834 USDT             |
+| Total trade volume          | 2939471.16 USDT           |
+|                             |                           |
+| Long / Short                | 771 / 643                 |
+| Total profit Long %         | 50.03%                    |
+| Total profit Short %        | 60.79%                    |
+| Absolute profit Long        | 5003.123 USDT             |
+| Absolute profit Short       | 6078.714 USDT             |
+|                             |                           |
+| Best Pair                   | 1000PEPE/USDT:USDT 56.70% |
+| Worst Pair                  | LTC/USDT:USDT 12.68%      |
+| Best trade                  | 1000PEPE/USDT:USDT 28.79% |
+| Worst trade                 | SUI/USDT:USDT -16.77%     |
+| Best day                    | 1409.65 USDT              |
+| Worst day                   | -3081.909 USDT            |
+| Days win/draw/lose          | 311 / 43 / 131            |
+| Avg. Duration Winners       | 5:13:00                   |
+| Avg. Duration Loser         | 15:05:00                  |
+| Max Consecutive Wins / Loss | 30 / 7                    |
+| Rejected Entry signals      | 0                         |
+| Entry/Exit Timeouts         | 0 / 3                     |
+|                             |                           |
+| Min balance                 | 9500.971 USDT             |
+| Max balance                 | 24067.984 USDT            |
+| Max % of account underwater | 23.35%                    |
+| Absolute Drawdown (Account) | 23.35%                    |
+| Absolute Drawdown           | 5620.577 USDT             |
+| Drawdown high               | 14067.984 USDT            |
+| Drawdown low                | 8447.406 USDT             |
+| Drawdown Start              | 2024-03-30 18:45:00       |
+| Drawdown End                | 2024-04-13 20:00:00       |
+| Market change               | 17.85%                    |
+===========================================================
+
+Backtested 2023-01-01 15:00:00 -> 2024-05-01 00:00:00 | Max open trades : 3
+====================================================================== STRATEGY SUMMARY ======================================================================
+|              Strategy |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
+|-----------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------+-----------------------|
+| MeanReversionStrategy |      1414 |           0.44 |         11081.837 |         110.82 |        7:43:00 |  1051     6   357  74.3 | 5620.577 USDT  23.35% |
+==============================================================================================================================================================
+
+For more details, please look at the detail tables above
+
+================================================================================
+Command: docker compose run --rm freqtrade backtesting --config user_data/config.json --strategy MeanReversionStrategy --timerange 20230101-20240501 -i 1h
+Output:
+Result for strategy MeanReversionStrategy
+======================================================== BACKTESTING REPORT =======================================================
+|               Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+|      LTC/USDT:USDT |       203 |           0.02 |           -55.754 |          -0.56 |       12:02:00 |   143     0    60  70.4 |
+| 1000PEPE/USDT:USDT |       160 |          -0.80 |         -1515.239 |         -15.15 |        4:25:00 |   112     0    48  70.0 |
+|      SUI/USDT:USDT |       143 |          -1.07 |         -1757.150 |         -17.57 |        5:46:00 |   101     0    42  70.6 |
+|              TOTAL |       506 |          -0.55 |         -3328.143 |         -33.28 |        7:51:00 |   356     0   150  70.4 |
+================================================== LEFT OPEN TRADES REPORT ===================================================
+|          Pair |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|---------------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| LTC/USDT:USDT |         1 |          -3.56 |           -32.718 |          -0.33 |       15:00:00 |     0     0     1     0 |
+|         TOTAL |         1 |          -3.56 |           -32.718 |          -0.33 |       15:00:00 |     0     0     1     0 |
+================================================== ENTER TAG STATS ===================================================
+|   TAG |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+-----------+----------------+-------------------+----------------+----------------+-------------------------|
+| OTHER |       506 |          -0.55 |         -3328.143 |         -33.28 |        7:51:00 |   356     0   150  70.4 |
+| TOTAL |       506 |          -0.55 |         -3328.143 |         -33.28 |        7:51:00 |   356     0   150  70.4 |
+==================================================== EXIT REASON STATS =====================================================
+|   Exit Reason |   Exits |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|---------------+---------+----------------+-------------------+----------------+----------------+-------------------------|
+|           roi |     415 |           2.82 |         12923.003 |         129.23 |        6:57:00 |   356     0    59  85.8 |
+|    force_exit |       1 |          -3.56 |           -32.718 |          -0.33 |       15:00:00 |     0     0     1     0 |
+|     stop_loss |      90 |         -16.07 |        -16218.427 |        -162.18 |       11:57:00 |     0     0    90     0 |
+|         TOTAL |     506 |          -0.55 |         -3328.143 |         -33.28 |        7:51:00 |   356     0   150  70.4 |
+===================== SUMMARY METRICS =====================
+| Metric                      | Value                     |
+|-----------------------------+---------------------------|
+| Backtesting from            | 2023-01-03 12:00:00       |
+| Backtesting to              | 2024-05-01 00:00:00       |
+| Max open trades             | 3                         |
+|                             |                           |
+| Total/Daily Avg Trades      | 506 / 1.05                |
+| Starting balance            | 10000 USDT                |
+| Final balance               | 6671.857 USDT             |
+| Absolute profit             | -3328.143 USDT            |
+| Total profit %              | -33.28%                   |
+| CAGR %                      | -26.35%                   |
+| Sortino                     | -1.48                     |
+| Sharpe                      | -1.54                     |
+| Calmar                      | -3.75                     |
+| Profit factor               | 0.80                      |
+| Expectancy (Ratio)          | -6.58 (-0.06)             |
+| Trades per day              | 1.05                      |
+| Avg. daily profit %         | -0.07%                    |
+| Avg. stake amount           | 1111.603 USDT             |
+| Total trade volume          | 562471.276 USDT           |
+|                             |                           |
+| Long / Short                | 272 / 234                 |
+| Total profit Long %         | -17.51%                   |
+| Total profit Short %        | -15.77%                   |
+| Absolute profit Long        | -1750.896 USDT            |
+| Absolute profit Short       | -1577.247 USDT            |
+|                             |                           |
+| Best Pair                   | LTC/USDT:USDT -0.56%      |
+| Worst Pair                  | SUI/USDT:USDT -17.57%     |
+| Best trade                  | 1000PEPE/USDT:USDT 13.26% |
+| Worst trade                 | LTC/USDT:USDT -16.28%     |
+| Best day                    | 331.85 USDT               |
+| Worst day                   | -866.509 USDT             |
+| Days win/draw/lose          | 173 / 212 / 97            |
+| Avg. Duration Winners       | 5:20:00                   |
+| Avg. Duration Loser         | 13:51:00                  |
+| Max Consecutive Wins / Loss | 14 / 5                    |
+| Rejected Entry signals      | 0                         |
+| Entry/Exit Timeouts         | 0 / 1                     |
+|                             |                           |
+| Min balance                 | 6671.857 USDT             |
+| Max balance                 | 10273.963 USDT            |
+| Max % of account underwater | 35.06%                    |
+| Absolute Drawdown (Account) | 35.06%                    |
+| Absolute Drawdown           | 3602.106 USDT             |
+| Drawdown high               | 273.963 USDT              |
+| Drawdown low                | -3328.143 USDT            |
+| Drawdown Start              | 2023-02-13 20:00:00       |
+| Drawdown End                | 2024-05-01 00:00:00       |
+| Market change               | 17.26%                    |
+===========================================================
+
+Backtested 2023-01-03 12:00:00 -> 2024-05-01 00:00:00 | Max open trades : 3
+====================================================================== STRATEGY SUMMARY ======================================================================
+|              Strategy |   Entries |   Avg Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |              Drawdown |
+|-----------------------+-----------+----------------+-------------------+----------------+----------------+-------------------------+-----------------------|
+| MeanReversionStrategy |       506 |          -0.55 |         -3328.143 |         -33.28 |        7:51:00 |   356     0   150  70.4 | 3602.106 USDT  35.06% |
+==============================================================================================================================================================
+
+For more details, please look at the detail tables above
+
+================================================================================

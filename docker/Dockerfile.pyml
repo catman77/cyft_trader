@@ -1,0 +1,5 @@
+ARG sourceimage=freqtradeorg/freqtrade
+ARG sourcetag=2024.4_freqaitorch
+FROM ${sourceimage}:${sourcetag}
+
+RUN pip install pandas_datareader pykalman pymc statsmodels tensorflow --user --no-cache-dir

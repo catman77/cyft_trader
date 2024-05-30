@@ -1,0 +1,10 @@
+FROM freqtradeorg/freqtrade:2024.4_freqaitorch
+
+
+# Pin prompt-toolkit to avoid questionary version conflict
+RUN pip install jupyterlab "prompt-toolkit<=3.0.36" jupyter-client --user --no-cache-dir
+RUN pip install pandas_datareader pykalman pymc statsmodels seaborn tensorflow --user --no-cache-dir
+# RUN pip install alphalens pyfolio --user --no-cache-dir
+
+# Empty the ENTRYPOINT to allow all commands
+ENTRYPOINT []
