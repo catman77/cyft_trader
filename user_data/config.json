@@ -46,8 +46,8 @@
   ],
   "telegram": {
     "enabled": true,
-    "token": "7188261766:AAFFikA0sK8jhJ7BVEZSvCuQKsNJWPbnFho",
-    "chat_id": "7086713456"
+    "token": "your-token",
+    "chat_id": "your-id"
   },
   "api_server": {
     "enabled": false,
@@ -55,8 +55,8 @@
     "listen_port": 8080,
     "verbosity": "error",
     "enable_openapi": false,
-    "jwt_secret_key": "40203bdc0d83276fef1d1b4f01f443c78ad68a905ded4176e149bdca7b78d49e",
-    "ws_token": "JMOmPWV9HNiQDzbBdIIhqF9m-T-8TwFyQw",
+    "jwt_secret_key": "api-key",
+    "ws_token": "api-token",
     "CORS_origins": [],
     "username": "",
     "password": ""
